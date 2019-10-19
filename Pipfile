@@ -11,4 +11,7 @@ verify_ssl = true
 python_version = "3.7"
 
 [scripts]
-app = "python3 -m package-name.app"
+app = "python3 -m nzbget_file_opener.app"
+build = "python3 setup.py sdist bdist bdist_wheel"
+deploy-test = "twine upload -r testpypi dist/*"
+deploy = "twine upload -r pypi dist/*"

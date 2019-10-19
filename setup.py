@@ -2,29 +2,35 @@ import setuptools
 
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.md') as f:
         return f.read()
 
 
 setuptools.setup(
-    name='package-name',
+    author='Ugo Popée',
+    author_email='ugo.popee@me.com',
+    name='nzbget-file-opener',
     version='0.1',
-    description='package-name description',
+    url='http://github.com/bil0u/nzbget-file-opener',
+    description='nzbget-file-opener allows you to download *.nzb files with just a double click',
     long_description=readme(),
+    keywords='nzbget-file-opener nzbget extension',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.7',
         'Topic :: Text Processing :: Linguistic',
     ],
-    keywords='package-name',
-    url='http://github.com/bil0u/package-name',
-    author='Ugo Popée',
-    author_email='ugo.popee@me.com',
     license='MIT',
     packages=[
-        'package-name'
+        'nzbget_file_opener'
     ],
     include_package_data=True,
-    zip_safe=False
+    zip_safe=False,
+    entry_points={
+        'console_scripts': [
+            'nzbget-file-opener=nzbget_file_opener.app:main'
+        ],
+    },
+    install_requires=[]
 )
