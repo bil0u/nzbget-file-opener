@@ -10,10 +10,11 @@ setuptools.setup(
     author='Ugo Popée',
     author_email='ugo.popee@me.com',
     name='nzbget-file-opener',
-    version='0.1',
+    version='0.2',
     url='http://github.com/bil0u/nzbget-file-opener',
     description='nzbget-file-opener allows you to download *.nzb files with just a double click',
     long_description=readme(),
+    long_description_content_type='text/markdown',
     keywords='nzbget-file-opener nzbget extension',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -32,5 +33,6 @@ setuptools.setup(
             'nzbget-file-opener=nzbget_file_opener.app:main'
         ],
     },
+    python_requires='>=3.6',
     install_requires=[]
 )
