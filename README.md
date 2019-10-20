@@ -8,7 +8,7 @@ pip install nzbget-file-opener
 
 ### Usage
 
-```shell script
+```
 nzbget-file-opener [-h]
                    [-n HOSTNAME] [-u USERNAME] [-p PASSWORD]
                    [-l CONFIG] [-d DOMAIN]
