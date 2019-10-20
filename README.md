@@ -1,5 +1,8 @@
 ## NZBget file opener
 
+This scripts sends .nzb files to the specified host. You can specify many options, like deleting the files after upload.
+Also, it ensures that NZBGet is running before sending the files, launching it if necessary (Auto-detected on macOS. Windows users have to manually specify app path).
+
 ### Install
 
 ```shell script
