@@ -10,7 +10,7 @@ setuptools.setup(
     author='Ugo Popée',
     author_email='ugo.popee@me.com',
     name='nzbget-file-opener',
-    version='1.0.1',
+    version='1.0.2',
     url='http://github.com/bil0u/nzbget-file-opener',
     description='nzbget-file-opener allows you to download *.nzb files with just a double click',
     long_description=readme(),
