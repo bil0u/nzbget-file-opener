@@ -55,38 +55,57 @@ optional arguments:
   -D, --delete-files    to delete the files sent to NZBget
 ```
 
-The nzbget credentials file should respect this format :
-```toml
-NZBGET_URL='[http|https]://hostname:port'
-NZBGET_USERNAME='username'
-NZBGET_PASSWORD='password'
-```
-
-###### Notes
-###### - url scheme and port are optional
-###### - you can also set these variables in your environment
 
 ### Scripts
 
 Available `pipenv run` scripts :
 
-- `install` - installs the package
+- `install` - installs the package in pipenv
 - `app` - runs the application
-- `test` - tests the application with [pytest](https://docs.pytest.org/en/latest/)
+- `test` - runs the tests with [pytest](https://docs.pytest.org/en/latest/)
 - `build` - build the app artifacts
 - `clean` - clean the artifacts created with the `build` script
 - `deploy-test` - deploy to [test.pypi](https://test.pypi.org)
 - `deploy` - deploy to [pypi](https://pypi.org)
 
-### Requirements
 
-In order to properly run the deploy scripts, you should :
 
-- have **[twine](https://pypi.org/project/twine/)** installed.
-- have a `~/.pypirc` file filled according to the template below
-    
+> In order to properly run the deploy scripts, you should :
+> - have **[twine](https://pypi.org/project/twine/)** installed.
+> - have a `~/.pypirc` file filled according to the template below
 
-#### `.pypirc` template    
+### Configurations templates
+
+`~/.nzbgetrc` configuration (recommended) :
+```toml
+[localhost]
+username = local-username
+password = local-password
+
+[remote.domain.tld]
+port = 6790
+username = remote-username
+password = remote-password
+
+```  
+> you can use defaut by not mentioning the field  
+
+---
+
+`.env` configuration :
+```toml
+NZBGET_URL='[http|https]://hostname:port'
+NZBGET_USERNAME='username'
+NZBGET_PASSWORD='password'
+```
+  
+> url scheme and port are optional
+
+> you can also set these variables in your environment
+
+---
+
+`.pypirc`    
 ```toml
 [distutils]
 index-servers=
