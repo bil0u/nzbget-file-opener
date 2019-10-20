@@ -6,13 +6,16 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+nzbget-file-opener = {editable = true,path = "."}
 
 [requires]
 python_version = "3.7"
 
 [scripts]
+install = "pipenv install -e ."
 app = "python3 -m nzbget_file_opener.app"
+test = "pytest"
 build = "python3 setup.py sdist bdist bdist_wheel"
 deploy-test = "twine upload -r testpypi dist/*"
 deploy = "twine upload -r pypi dist/*"
-clean = "rm -rf build/ dist/ nzbget_file_opener.egg-info/"
+clean = "rm -rf build/ dist/ nzbget_file_opener.egg-info/ .pytest_cache"

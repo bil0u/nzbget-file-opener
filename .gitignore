@@ -12,3 +12,9 @@ dist/
 
 # Python packaging
 build/
+
+# Python tests cache
+.pytest_cache/
+
+# Misc
+.env

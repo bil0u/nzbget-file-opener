@@ -1,0 +1,7 @@
+[filehost]
+port=1234
+username=fileuser
+password=filepass
+[otherhost]
+username=otheruser
+password=otherpass

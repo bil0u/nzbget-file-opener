@@ -10,7 +10,7 @@ setuptools.setup(
     author='Ugo Popée',
     author_email='ugo.popee@me.com',
     name='nzbget-file-opener',
-    version='0.2',
+    version='1.0',
     url='http://github.com/bil0u/nzbget-file-opener',
     description='nzbget-file-opener allows you to download *.nzb files with just a double click',
     long_description=readme(),
@@ -34,5 +34,8 @@ setuptools.setup(
         ],
     },
     python_requires='>=3.6',
-    install_requires=[]
+    install_requires=[
+        'pytest',
+        'psutil'
+    ]
 )
