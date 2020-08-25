@@ -8,9 +8,6 @@ verify_ssl = true
 [packages]
 nzbget-file-opener = {editable = true,path = "."}
 
-[requires]
-python_version = "3.7"
-
 [scripts]
 install = "pipenv install -e ."
 app = "python3 -m nzbget_file_opener.app"
