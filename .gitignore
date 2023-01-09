@@ -12,6 +12,7 @@ dist/
 
 # Python packaging
 build/
+bin/*.zip
 
 # Python tests cache
 .pytest_cache/
