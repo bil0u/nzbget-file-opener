@@ -9,6 +9,8 @@ Also, it ensures that NZBGet is running before sending the files, launching it i
 pip install nzbget-file-opener
 ```
 
+_**Optional**: macOS users can [install the app](https://github.com/bil0u/nzbget-file-opener/releases/latest) to attach `.nzb` files, to automatically send them to the server when double clicked._
+
 ### Usage
 
 ```
